@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "autocomplete-cities"
+version = "0.1.0"
+description = "API that suggests cities"
+authors = ["Sam Naden <samnaden@gmail.com>"]
+packages = [{include = "autocomplete_cities"}]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.85.0"
+uvicorn = {version = "^0.18.3", extras = ["standard"]}
+gunicorn = "^20.1.0"
+pydantic = "^1.9.1"
+pandas = "^2.2.0"
+geopy = "^2.4.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.3"
+black = "^22.3.0"
+bandit = "^1.7.4"
+isort = "^5.10.1"
+pre-commit = "^2.19.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
