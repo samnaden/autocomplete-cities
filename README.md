@@ -9,7 +9,7 @@ You can now execute something like `curl 'localhost:5000/api/v1.0/suggestions?q=
 Now you can make code changes locally and test how they work out. Tip: use PyCharm and run the file `./autocomplete_cities/app.py` in debug mode in order to debug your code.
 
 ### tests
-Simply run `pytest` from this directory.
+Run `poetry shell` to enter the venv for this project, then run `pytest` from this directory.
 
 ### deployment
 From this directory execute `docker build -t autocomplete-cities-0 .`. You can then push this image to your favorite registry (e.g. AWS ECR) and use it however you wish (e.g. AWS ECS).  
