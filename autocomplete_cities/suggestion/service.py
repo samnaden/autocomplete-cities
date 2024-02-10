@@ -13,6 +13,7 @@ def get_suggestions(city_name: str, lat: Optional[float], long: Optional[float])
 
     max_distance = -1.0
     similarities = {}
+    # TODO: parallelize this for loop
     for city_id, city in cities.items():
         name_similarity = string_similarity.get_similarity_score(city_name, city.name)
         similarities[city_id] = [name_similarity]
